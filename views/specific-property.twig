@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+  
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Your Home <span class="head-span">Builder</span> And <span class="head-span">Finder</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <button class="search-button">
+
+      {% if user.name %}  
+        <a href="/yourAccount"><img class="search-symbol" src="/images/account.png"></a>
+
+      {% else %}
+        <a href="/signIn"><img class="search-symbol" src="/images/account.png"></a>
+      
+      {% endif %}
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/property">Property</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/decor">Decor</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="property">
+    <div class="sell-prop">
+        <div class="prop-content-div">
+            <h1>A-108 Narrow Lane</h1>
+            <div class="rent-buy-div">
+                <h5><a class="buy-link" href="/buy">Illinois  521212</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="carouselExampleCaptions" class="carousel slide specific-prop-carousel" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="specific-prop-image car-image" src="images/image1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img class="specific-prop-image car-image" src="images/slide-2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img class="specific-prop-image car-image" src="images/slide-1.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="property-description">
+    <div class="sell-prop">
+        <div class="prop-content-div specific-prop-content-div">
+            <h1>Property Description</h1>
+            <div class="underline-div">
+            </div>
+
+            <div class="property-description-content">
+                A REWARDING ESCAPE PEACEFULLY SITUATED: Luxurious and upgraded, this 4 bedroom, 4.5 bathroom home of 5,281 sq. ft. 
+                (including poolhouse, per independent third-party measurement) rests on a lot of 1.23 acres (per county) on a peaceful 
+                cul-de-sac in the Lakeside neighborhood. Richly-appointed spaces include large gathering areas, a bright, professional-grade 
+                kitchen, spectacular dining room, two walk-out master suites, and a home theater. Contemporary amenities include solar PV and 
+                a Tesla EV charging station. The expansive backyard includes a sparkling pool and spa plus a comfortable poolhouse all in 
+                private, verdant surroundings. You’ll appreciate the short drive to downtown Los Altos, Rancho Shopping Center, access to 
+                Interstate 280, and numerous parks and preserves.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="property-description amenities">
+    <div class="sell-prop">
+        <div class="prop-content-div specific-prop-content-div">
+            <h1>Ameneties</h1>
+            <div class="underline-div">
+            </div>
+
+            <div class="container amenities-content1">
+                <div class="row row-cols-4">
+                    <div class="col">- Balcony</div>
+                    <div class="col">- Outdooe Kitchen</div>
+                    <div class="col">- Cable Tv</div>
+                    <div class="col">- Desk</div>
+                </div>
+            </div>
+
+            <div class="container amenities-content2">
+                <div class="row row-cols-4">
+                    <div class="col">- Furniture</div>
+                    <div class="col">- Chimney</div>
+                    <div class="col">- Parking</div>
+                    <div class="col">- x`Internet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="property-description amenities">
+    <div class="sell-prop">
+        <div class="prop-content-div specific-prop-content-div">
+            <h1>Contact the Seller</h1>
+            <div class="underline-div">
+            </div>
+
+            <div class="container amenities-content1">
+                <div class="">
+                    <h3>Phone: 4545897623</h3>
+                    <h3>Email: seller@gmail.com</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

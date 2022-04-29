@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">Your Home <span class="head-span">Builder</span> And <span class="head-span">Finder</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <button class="search-button">
+
+      {% if user.name %}  
+        <a href="/yourAccount"><img class="search-symbol" src="/images/account.png"></a>
+
+      {% else %}
+        <a href="/signIn"><img class="search-symbol" src="/images/account.png"></a>
+      
+      {% endif %}
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/property">Property</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/decor">Decor</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="sidenav">
+      <div class="login-main-text">
+         <h2>Your<br>Account</h2>
+         <p></p>
+      </div>
+   </div>
+
+
+
+<div class="main">
+      <div class="user-info">
+         
+            <div class="form-group">
+               <p>Your Name  : <span>{{user.name}}</span></p>
+            </div>
+            <div class="form-group">
+               <p>Your Email Id : <span>{{user.email}}</span></p>
+            </div>
+            <br><br><br>
+            <div>
+   
+            </div>
+            <br><br><br>
+            <div>
+            <button type="submit" class="btn btn-danger">Logout</button>
+            </div>
+         
+      </div>
+</div>
+
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+
+   var button2 = document.querySelector('.btn-danger');
+
+
+   button2.addEventListener('click',()=>{
+   parent.location  = "/logout";
+   });
+   
+
+
+</script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
